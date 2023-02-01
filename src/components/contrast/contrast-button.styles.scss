@@ -1,0 +1,26 @@
+
+
+.contrast-button {
+
+  button {
+    background-color: transparent;
+    border:0;
+    cursor: pointer;
+    margin:2em 1em;
+    padding:0;
+  }
+
+}
+
+  .lightbulb_on {
+    opacity: 0;
+  }
+
+  .contrast-light {
+
+      .lightbulb_on {
+        opacity: 1;
+      }
+   
+  
+  }

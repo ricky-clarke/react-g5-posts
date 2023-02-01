@@ -1,0 +1,70 @@
+@import './sass/mixins.scss';
+
+:root {
+  --color-yellow : #FFD700;
+  --color-pink : #ff328e;
+  --transition : 0.2s all ease-in;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+html {
+  background-color: #000;
+  background-image: url('/assets/bg.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+}
+
+body {
+
+  &.contrast-light {
+
+    .navigation {
+      background-color: #e0e0e0;
+      @include transition(background-color);
+      
+      a {
+        color:#333;
+        @include transition(color);
+
+      }
+
+    }
+
+    .category_filters {
+      button {
+        border-color: #000;
+        color: var(--color-yellow);
+      }
+    }
+
+    .content {
+      background-color: #fff;
+      color:#333;
+      @include transition(background-color);
+      @include transition(color);
+    }
+
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.container {
+  height: 100%;
+}
+
+.content {
+ // background-color: #413B3B;
+  color:#fff;
+  height:100vh;
+  overflow-y: scroll;
+  padding:3rem 6rem;
+  width:-webkit-fill-available;
+  @include transition(background-color);
+}

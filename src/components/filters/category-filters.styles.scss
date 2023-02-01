@@ -1,0 +1,25 @@
+@import '../../sass/mixins.scss';
+
+.category_filters {
+
+    display: flex;
+    margin-bottom:4rem;
+
+    button {
+        background: none;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        padding: 0.5em 1rem;
+        font-size: 1rem;
+        margin-right: 1rem;
+
+        &:hover {
+           background-color: var(--color-yellow);
+           color: #000;
+           @include transition(all);
+        }
+
+    }
+}
