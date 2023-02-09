@@ -2,28 +2,29 @@ import { Fragment } from 'react';
 import { Outlet, NavLink  } from 'react-router-dom';
 import ContrastButton from '../../components/contrast/contrast-button.component';
 import NavToggle from '../../components/nav-toggle/nav-toggle.component';
-import './navigation.styles.scss';
+// import './navigation.styles.jsx';
+import { NavMenu, Nav } from './navigation.styles';
 
 const Navigation = () => {
 
     return(
 
         <Fragment>
-            <div className='navigation'>
+            <NavMenu>
                 <div>
                     <NavToggle />
-                    <nav>
+                    <Nav>
                         <ul>
                             <li><NavLink  to='/' end>Home</NavLink></li>
                             <li><NavLink to='/news-and-insights'>News &amp; insights</NavLink></li>
                             <li><NavLink to='/work' >Work</NavLink></li>
                             <li><NavLink to='/contact'>Contact</NavLink></li>
-                            <li><NavLink to='/test'>Test</NavLink></li>
+                            <li><NavLink to='/built'>Built</NavLink></li>
                         </ul>
-                    </nav>
+                    </Nav>
                 </div>
                 <ContrastButton />
-            </div>
+            </NavMenu>
       <Outlet />
     </Fragment>
     )

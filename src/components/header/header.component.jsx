@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import DisplayButton from '../display/display-button.component';
 import './header.styles.scss';
 

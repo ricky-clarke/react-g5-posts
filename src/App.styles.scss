@@ -78,6 +78,13 @@ ul, ol {
     display: grid;
     grid-template-columns: 300px 1fr;
     min-height: 100vh;
+    transition: 1s all ease;
+
+    &--expand {
+      grid-template-columns: 80px 1fr;
+      transition: 1s all ease;
+    }
+
 }
 
 .container {

@@ -5,15 +5,11 @@ import './contrast-button.styles.scss';
 const ContrastButton = () => {
 
      // Custom hook, set initial state to dark
-     const [theme, setTheme] = useLocalStorage('theme', 'dark')
+     const [theme, setTheme] = useLocalStorage('theme', 'dark');
 
-     const checkbox = document.getElementById('ricky');
-
-     {
-     (theme === 'light' ? 
+     theme === 'light' ? 
      document.getElementsByTagName("BODY")[0].classList.add('contrast-light') : 
-     document.getElementsByTagName("BODY")[0].classList.remove('contrast-light'))
-     }
+     document.getElementsByTagName("BODY")[0].classList.remove('contrast-light')
 
 
      const Icon = () => (
@@ -21,12 +17,12 @@ const ContrastButton = () => {
           <div>
                 <svg fill="#ff328e" version="1.1" id="Layer_1" width="50px" height="50px" viewBox="0 0 100 100" enable-background="new 0 0 100 100">
                     <g>
-                        <path class="lightbulb_on" d="M80.302,18.915L80.302,18.915l0.042-0.042l-0.008-0.008c0.523-0.57,0.518-1.451-0.033-2.003l0,0l-2.053-2.053l0,0l0,0
+                        <path className="lightbulb_on" d="M80.302,18.915L80.302,18.915l0.042-0.042l-0.008-0.008c0.523-0.57,0.518-1.451-0.033-2.003l0,0l-2.053-2.053l0,0l0,0
                             c-0.552-0.551-1.433-0.556-2.003-0.033l-0.009-0.009l-8.842,8.843c-0.567,0.566-0.567,1.486,0,2.053h0l2.053,2.054l0.001,0
                             c0.567,0.567,1.486,0.567,2.053,0L80.302,18.915L80.302,18.915z"/>
-                        <path class="lightbulb_on" d="M48.548,19.274v0.001h2.903v-0.001c0.782,0,1.415-0.619,1.446-1.393h0.006V5.378c0-0.802-0.65-1.452-1.452-1.452V3.924
+                        <path className="lightbulb_on" d="M48.548,19.274v0.001h2.903v-0.001c0.782,0,1.415-0.619,1.446-1.393h0.006V5.378c0-0.802-0.65-1.452-1.452-1.452V3.924
                             h-2.903v0.001c-0.802,0-1.452,0.65-1.452,1.452v12.504h0.006C47.134,18.655,47.766,19.274,48.548,19.274z"/>
-                        <path class="lightbulb_on"  d="M91.613,39.997c0-0.783-0.619-1.415-1.393-1.446v-0.006H77.716c-0.802,0-1.452,0.649-1.452,1.452h0V42.9h0
+                        <path className="lightbulb_on"  d="M91.613,39.997c0-0.783-0.619-1.415-1.393-1.446v-0.006H77.716c-0.802,0-1.452,0.649-1.452,1.452h0V42.9h0
                             c0,0.803,0.65,1.453,1.452,1.453H90.22v-0.006c0.774-0.032,1.393-0.665,1.393-1.447h0L91.613,39.997L91.613,39.997z"/>
                         <path d="M50,24.201c-11.756,0-21.285,9.529-21.285,21.285c0,4.608,1.479,8.862,3.968,12.346h-0.008
                             c3.174,4.952,5.157,11.512,5.303,18.739c0.255,0.419,0.711,0.703,1.237,0.703c0.056,0,0.109-0.01,0.163-0.017v0.017H60.55v-0.017
@@ -39,9 +35,9 @@ const ContrastButton = () => {
                             c-0.784,0-1.42,0.624-1.447,1.403c-0.002,0.019-0.003,0.038-0.005,0.057v3.376c0,0.802,0.65,1.452,1.452,1.452
                             c0.056,0,0.109-0.01,0.163-0.017v0.017H60.55V86.62c0.054,0.006,0.107,0.017,0.162,0.017c0.802,0,1.452-0.65,1.452-1.452V81.8
                             C62.164,80.997,61.514,80.348,60.712,80.348z"/>
-                        <path class="lightbulb_on" d="M22.344,39.685v-0.006H9.839c-0.802,0-1.452,0.65-1.452,1.451v2.904c0,0.801,0.65,1.451,1.452,1.451h12.505V45.48
+                        <path className="lightbulb_on" d="M22.344,39.685v-0.006H9.839c-0.802,0-1.452,0.65-1.452,1.451v2.904c0,0.801,0.65,1.451,1.452,1.451h12.505V45.48
                             c0.773-0.032,1.393-0.665,1.393-1.445h0V41.13h0C23.736,40.35,23.117,39.717,22.344,39.685z"/>
-                        <path class="lightbulb_on"  d="M20.199,18.415l8.842,8.843l0.009-0.009c0.569,0.523,1.45,0.519,2.002-0.033l0.001,0l2.053-2.054h0
+                        <path className="lightbulb_on"  d="M20.199,18.415l8.842,8.843l0.009-0.009c0.569,0.523,1.45,0.519,2.002-0.033l0.001,0l2.053-2.054h0
                             c0.552-0.552,0.556-1.434,0.033-2.003l0.009-0.009l-8.843-8.842c-0.566-0.566-1.486-0.566-2.053,0l0,0l0,0l-2.053,2.053l0,0
                             C19.632,16.929,19.632,17.848,20.199,18.415z"/>
                     </g>
@@ -62,19 +58,6 @@ const ContrastButton = () => {
                </button>
           </div>
 
-          // <div className="switch-button">
-          //      <input 
-          //      id="ricky"
-          //      className="switch-button-checkbox"
-          //      type="checkbox"
-          //      onClick={() => (theme === 'light' ? setTheme('dark') : setTheme('light'))}
-          //      defaultChecked={ theme === 'light'}
-          //      >
-          //      </input>
-
-          //      <label className="switch-button-label" htmlFor=""><span className="switch-button-label-span">Dark</span></label>
-
-          // </div>
     )
 
 }
