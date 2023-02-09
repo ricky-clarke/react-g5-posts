@@ -1,3 +1,5 @@
+// Used to fetch API URL
+
 import { useState, useEffect } from 'react';
 
 const UseFetch = (url) => {

@@ -2,7 +2,6 @@ import './nav-toggle.styles.scss';
 
 import arrowRight from '../../assets/arrow-right.svg';
 
-
 const NavToggle = () => {
 
     const navHandler = () => {

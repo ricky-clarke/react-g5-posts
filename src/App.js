@@ -11,16 +11,24 @@ import SinglePost from './routes/single-post/single-post.component';
 const  App = () => {
 
   return (
-      <div className='container d-flex'>
+      <div className='body_wrap'>
+
+        <div>
+        
+         <Navigation />
+
+         </div>
+
         <Routes>  
-              <Route path='/' element={ <Navigation /> } >
-              <Route index element={ <Home /> } /> 
-              <Route path='/news-and-insights/' element={ <Posts /> } /> 
-              <Route path='/work/' element={ <Work /> } /> 
-              <Route path='/contact/' element={ <Contact /> } /> 
-              <Route path='/test/' element={ <Test /> } />
-              <Route path='/single-post/:id' element={ <SinglePost />} />
-              </Route>
+              {/* <Route path='/' element={ <Navigation /> } > */}
+              <Route path='/' element={ <Home /> } /> 
+                <Route path='/news-and-insights/'> 
+                    <Route index element={ <Posts />} />
+                    <Route path=':id' element={ <SinglePost />} />
+                </Route>
+                <Route path='/work/' element={ <Work /> } /> 
+                <Route path='/contact/' element={ <Contact /> } /> 
+                <Route path='/test/' element={ <Test /> } />
         </Routes>
       </div>
   );

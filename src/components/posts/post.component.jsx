@@ -17,7 +17,7 @@ const Post = ({ id, title, excerpt, img, link, category }) => {
         </figcaption>
         </div>
 
-        <Link to={`/single-post/${id}`}></Link>
+        <Link to={`/news-and-insights/${id}`}></Link>
 
       {/* <a href={link} target="_blank" rel="noreferrer" aria-label="Read post" ></a> */}
     </article>

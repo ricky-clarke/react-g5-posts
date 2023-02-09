@@ -13,12 +13,14 @@ html, body, #root {
 html {
   background-color: #000;
   background-image: url('/assets/bg.jpg');
+  background-attachment: fixed;
   background-size: 100%;
   background-repeat: no-repeat;
-  overflow-y: hidden;
 }
 
 body {
+
+  font-size:1.1em;
 
   &.contrast-light {
 
@@ -49,10 +51,33 @@ body {
     }
 
   }
+
 }
+
+a {
+  color: var(--color-pink);
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.7em;
+}
+
+ul, ol {
+  li {
+    margin-bottom:0.5em;
+  }
+}
+
 
 .d-flex {
   display: flex;
+}
+
+.body_wrap {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    min-height: 100vh;
 }
 
 .container {
@@ -60,10 +85,7 @@ body {
 }
 
 .content {
- // background-color: #413B3B;
   color:#fff;
-  height:100vh;
-  overflow-y: scroll;
   padding:3rem 6rem;
   width:-webkit-fill-available;
   @include transition(background-color);

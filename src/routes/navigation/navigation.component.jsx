@@ -1,40 +1,28 @@
 import { Fragment } from 'react';
-import { Outlet, Link, useLocation  } from 'react-router-dom';
+import { Outlet, NavLink  } from 'react-router-dom';
 import ContrastButton from '../../components/contrast/contrast-button.component';
 import NavToggle from '../../components/nav-toggle/nav-toggle.component';
-
 import './navigation.styles.scss';
 
 const Navigation = () => {
-
-     //assigning location variable
-     const location = useLocation();
-
-     //destructuring pathname from location
-     const { pathname } = location;
- 
-     //Javascript split method to get the name of the path in array
-     const splitLocation = pathname.split("/");
 
     return(
 
         <Fragment>
             <div className='navigation'>
                 <div>
-                <NavToggle />
-                <nav>
-                    <ul>
-                        <li className={splitLocation[1] === "" ? "menu-active" : ""}><Link to='/'>Home</Link></li>
-                        <li className={splitLocation[1] === "news-and-insights" ? "menu-active" : ""}><Link to='/news-and-insights'>News & insights</Link></li>
-                        <li className={splitLocation[1] === "work" ? "menu-active" : ""}><Link to='/work' >Work</Link></li>
-                        <li className={splitLocation[1] === "contact" ? "menu-active" : ""}><Link to='/contact'>Contact</Link></li>
-                        <li className={splitLocation[1] === "test" ? "menu-active" : ""}><Link to='/test'>Test</Link></li>
-                    </ul>
-                </nav>
+                    <NavToggle />
+                    <nav>
+                        <ul>
+                            <li><NavLink  to='/' end>Home</NavLink></li>
+                            <li><NavLink to='/news-and-insights'>News &amp; insights</NavLink></li>
+                            <li><NavLink to='/work' >Work</NavLink></li>
+                            <li><NavLink to='/contact'>Contact</NavLink></li>
+                            <li><NavLink to='/test'>Test</NavLink></li>
+                        </ul>
+                    </nav>
                 </div>
-
                 <ContrastButton />
-
             </div>
       <Outlet />
     </Fragment>

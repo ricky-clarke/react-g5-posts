@@ -1,16 +1,16 @@
 .nav-toggle-button {
-    background: linear-gradient( 90deg, transparent 50%, rgba(10, 10, 10, .65) 50%);
-    border-radius: 50%;
+    background: transparent;
+    border:0;
     color: #fff;
     cursor: pointer;
     font-size: 38px;
     line-height: 50%;
     position: absolute;
-    right: -20px;
+    right: -10px;
     padding: 0;
     text-align: center;
     top: 50px;
-    width:50px;
+    width:20px;
 
     img {
         height: 100%;
