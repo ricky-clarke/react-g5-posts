@@ -2,7 +2,6 @@ import { Fragment } from 'react';
 import { Outlet, NavLink  } from 'react-router-dom';
 import ContrastButton from '../../components/contrast/contrast-button.component';
 import NavToggle from '../../components/nav-toggle/nav-toggle.component';
-// import './navigation.styles.jsx';
 import { NavMenu, Nav } from './navigation.styles';
 
 const Navigation = () => {

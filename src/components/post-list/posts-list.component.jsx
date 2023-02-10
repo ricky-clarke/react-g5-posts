@@ -2,7 +2,7 @@
 import Post from '../posts/post.component';
 import './post-list.styles.scss';
 
-const PostList = ( { posts } ) => {
+const PostList = ( { posts, post_type } ) => {
 
     return(
 
@@ -18,6 +18,7 @@ const PostList = ( { posts } ) => {
                     link = {post?.link}         
                     img = {post && post._embedded && post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].source_url : null }
                     category = {post?.categories}
+                    post_type = {post_type}
                     />
                 )
             })

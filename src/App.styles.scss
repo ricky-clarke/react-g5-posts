@@ -44,7 +44,7 @@ body {
 
   &.contrast-light {
 
-    .navigation {
+    .nav_menu {
       background-color: #e0e0e0;
       @include transition(background-color);
       

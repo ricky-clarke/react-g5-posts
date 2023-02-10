@@ -3,23 +3,53 @@
     position: relative;
     transition: 0.3s transform ease-in-out;
 
+    > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    figcaption {
+        bottom: 0;
+        padding: 0.25em 1em;
+        position: relative;
+
+        div {
+
+            &:after {
+                content:"";
+                background-color: rgba(0,0,0, 0.7);
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+                z-indeX:1;
+               }
+
+               * {
+                position: relative;
+                z-index: 9;
+               }
+
+        }
+
+
+
+    }
+
     &:hover {
 
        img {
-        transform: scale(1.1);
-        transition: var(--transition);
-       }
-
-       h2 {
-        color: var(--color-pink);
-        transition: var(--transition);
+        transform: scale(1);
+        transition:0.5s all ease-in-out
        }
 
     }
 
     &__img {
-        height: 0;
-        overflow: hidden;
+         overflow: hidden;
         padding-bottom: 50%;
         position: relative;
 
@@ -29,8 +59,8 @@
             object-fit: cover;
             position: absolute;
             top: 0;
-            width:100%;
-            transition: var(--transition);
+            transform: scale(1.2);
+            transition:0.5s all ease-in-out
         }
     }
 
