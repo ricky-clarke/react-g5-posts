@@ -4,7 +4,7 @@ import Home from './routes/home/home.component';
 import Posts from './routes/posts/posts.component';
 import Contact from './routes/contact/contact.component';
 import Work from './routes/work/work.component';
-import Built from './routes/built/built.component';
+import About from './routes/about/about.component';
 import './App.styles.scss';
 import SinglePost from './routes/single-post/single-post.component';
 
@@ -28,7 +28,7 @@ const  App = () => {
                 </Route>
                 <Route path='/work/' element={ <Work /> } /> 
                 <Route path='/contact/' element={ <Contact /> } /> 
-                <Route path='/built/' element={ <Built /> } />
+                <Route path='/about/' element={ <About /> } />
         </Routes>
       </div>
   );

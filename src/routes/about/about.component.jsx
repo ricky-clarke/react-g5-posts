@@ -1,11 +1,13 @@
 import Header from "../../components/header/header.component"
 
-const Built = () => {
+const About = () => {
 
 
   return (
-    <div className="content">
-           <Header  pageTitle={'Built using'} displayToggle={false}/>
+    <div className="content content--post">
+           <Header  pageTitle={'About'} displayToggle={false}/>
+
+           <p>Built using</p>
 
             <ul>
               <li><h2>Components</h2></li>
@@ -29,4 +31,4 @@ const Built = () => {
   )
 }
 
-export default Built
+export default About

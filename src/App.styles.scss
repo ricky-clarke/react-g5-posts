@@ -22,6 +22,26 @@ body {
 
   font-size:1.1em;
 
+  /* width */
+  &::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+&::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/* Handle */
+&::-webkit-scrollbar-thumb {
+    background: var(--color-pink);
+}
+
+/* Handle on hover */
+&::-webkit-scrollbar-thumb:hover {
+    background: #5AABE6;
+}
+
   &.contrast-light {
 
     .navigation {
