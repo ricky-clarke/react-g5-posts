@@ -4,7 +4,7 @@ import UseFetch from '../../components/use-fetch/use-fetch.component';
 
 const Posts = () => {
 
-    const { data } = UseFetch('https://www.granite5.com/wp-json/wp/v2/posts?_fields=id,title,link,_links,_embedded&_embed&per_page=19');
+    const { data } = UseFetch('https://www.granite5.com/wp-json/wp/v2/posts?_fields=id,date_gmt,title,link,_links,_embedded&_embed&per_page=18');
 
     return(
         <div className="content">

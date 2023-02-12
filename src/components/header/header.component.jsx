@@ -3,8 +3,6 @@ import './header.styles.scss';
 
 const Header = ({pageTitle, displayToggle}) => {
 
-    // const toggle = displayToggle;
-
     return(
             <div className="content-header">
                 <h1>{pageTitle}</h1>

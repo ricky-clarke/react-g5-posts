@@ -17,17 +17,6 @@ const CategoryFilter = () => {
        );
     }, []); // No dependancy - only call this function on mount
 
-
-    const categoryHandler = (event) => {
-
-      console.log('test');
-
-      
-  
-    }
-
-
-
   return (
     <div className="category_filters">
     {

@@ -14,6 +14,7 @@ const PostList = ( { posts, post_type } ) => {
                     <Post
                     key={post?.id}
                     id={post?.id}
+                    post_date={post?.date_gmt}
                     title = {post?.title.rendered}
                     link = {post?.link}         
                     img = {post && post._embedded && post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].source_url : null }

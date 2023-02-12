@@ -1,6 +1,7 @@
 @import './sass/mixins.scss';
 
 :root {
+  --color-purple: #673eab;
   --color-yellow : #FFD700;
   --color-pink : #ff328e;
   --transition : 0.2s all ease-in;
@@ -51,7 +52,6 @@ body {
       a {
         color:#333;
         @include transition(color);
-
       }
 
     }
@@ -69,6 +69,19 @@ body {
       @include transition(background-color);
       @include transition(color);
     }
+
+    article {
+      color:#fff;
+    }
+
+    &.content--row {
+      .post-list article {
+        color:#333;
+      }
+    }
+
+
+
 
   }
 

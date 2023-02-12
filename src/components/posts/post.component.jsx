@@ -1,19 +1,28 @@
 import "./post.styles.scss";
 
-import ImagePlaceholder from './placeholder.jpg';
+import ImagePlaceholder from './g5-logo.svg';
 import { Link } from "react-router-dom";
 
-const Post = ({ id, title, excerpt, img, link, category, post_type }) => {
+const Post = ({ id, title, post_date, img, link, category, post_type }) => {
+
+  // Format the date
+  const date = new Date(post_date)
+    const formattedDate = date.toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    })
 
   return (
     <article id={`post-article-${id}`} className="post-article" data-category={category}>
       <div>
         <div className="post-article__img">
-               { img ? ( <img src={img} alt=""/>) : (<img src={ImagePlaceholder} alt=""/>)}
+               { img ? ( <img className="post_img" src={img} alt=""/>) : (<img className="post_img--holder" src={ImagePlaceholder} alt=""/>)}
         </div>
         <figcaption>
-          <div><h2 dangerouslySetInnerHTML={{ __html: title }}></h2>
-          <p>{excerpt}</p>
+          <div>
+            <p>{formattedDate}</p>
+            <h2 dangerouslySetInnerHTML={{ __html: title }}></h2>
           </div>
         </figcaption>
         </div>
