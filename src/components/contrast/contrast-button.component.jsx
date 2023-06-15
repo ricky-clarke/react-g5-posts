@@ -1,6 +1,5 @@
 import useLocalStorage from './contrast.localstorage';
 import './contrast-button.styles.scss';
-// import lightBulb from '../../assets/turned-off-lightbulb-with-shine-svgrepo-com.svg';
 
 const ContrastButton = () => {
 
