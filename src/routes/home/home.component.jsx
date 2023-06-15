@@ -5,6 +5,7 @@ const Home = () => {
     return(
         <div className="content">
             <Header  pageTitle={'Home'} displayToggle={false}/>
+            <h2>WordPress posts and custom post type posts pulled in from granite5.com</h2>
             <p>Built using</p>
                 <ul>
                 <li><h2>Components</h2></li>
